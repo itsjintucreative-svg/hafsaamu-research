@@ -801,3 +801,186 @@ a {
     gap: 8px;
   }
 }
+
+
+/* =================================
+   HAFSAAMU — PREMIUM MOTION SYSTEM
+================================= */
+
+/* Hero entrance */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-inner > * {
+  animation: heroReveal 0.9s ease both;
+}
+
+.hero-inner .eyebrow {
+  animation-delay: 0.1s;
+}
+
+.hero-inner h1 {
+  animation-delay: 0.2s;
+}
+
+.hero-inner .hero-description {
+  animation-delay: 0.35s;
+}
+
+.hero-inner .primary-link {
+  animation-delay: 0.5s;
+}
+
+/* Hero orbital animation */
+.visual-orbit.orbit-one {
+  animation: orbitRotate 28s linear infinite;
+}
+
+.visual-orbit.orbit-two {
+  animation: orbitRotate 35s linear infinite reverse;
+}
+
+@keyframes orbitRotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.visual-core {
+  animation: coreFloat 5s ease-in-out infinite;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes coreFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.visual-dot.dot-one {
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+.visual-dot.dot-two {
+  animation: dotPulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    scale: 1.7;
+    opacity: 0.5;
+  }
+}
+
+/* Featured research motion */
+.featured-visual {
+  perspective: 800px;
+}
+
+.featured-orbit.orbit-one {
+  animation: orbitFloat 7s ease-in-out infinite;
+}
+
+.featured-orbit.orbit-two {
+  animation: orbitFloat 9s ease-in-out infinite reverse;
+}
+
+@keyframes orbitFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -18px;
+  }
+}
+
+.featured-symbol {
+  transition: transform 0.6s ease;
+}
+
+.featured-layout:hover .featured-symbol {
+  transform: scale(1.12);
+}
+
+/* Research cards */
+.area-item,
+.latest-card {
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.area-item:hover {
+  transform: translateY(-7px);
+}
+
+.latest-card:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.latest-card > span,
+.read-link,
+.research-closing > a {
+  transition: color 0.25s ease;
+}
+
+.latest-card:hover > span {
+  color: var(--accent);
+}
+
+/* Links */
+.primary-link,
+.section-top a,
+.research-closing > a {
+  transition: all 0.3s ease;
+}
+
+.primary-link:hover,
+.section-top a:hover {
+  letter-spacing: 0.02em;
+}
+
+/* Smooth page rendering */
+.research-home {
+  animation: pageReveal 0.8s ease both;
+}
+
+@keyframes pageReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
