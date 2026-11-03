@@ -32,14 +32,15 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="hero-visual" aria-hidden="true">
-          <div className="visual-grid" />
-          <div className="visual-orbit orbit-one" />
-          <div className="visual-orbit orbit-two" />
-          <div className="visual-core">H</div>
-          <span className="visual-dot dot-one" />
-          <span className="visual-dot dot-two" />
-        </div>
+        
+<div className="hero-visual">
+  <img
+    src="/media/solar%20system.svg"
+    alt="Solar System"
+    className="solar-system-art"
+  />
+</div>
+
       </section>
 
       {/* INTRODUCTION */}

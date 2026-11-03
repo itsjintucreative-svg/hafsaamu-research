@@ -984,3 +984,287 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+
+
+/* =====================================
+   HAFSAAMU — NEW PREMIUM HERO
+===================================== */
+
+.research-hero {
+  min-height: 760px;
+  padding: 120px 8vw 95px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  background: #fafaf8;
+}
+
+.hero-inner {
+  max-width: 750px;
+  position: relative;
+  z-index: 3;
+}
+
+.research-hero h1 {
+  font-size: clamp(65px, 8.5vw, 112px);
+  line-height: .98;
+  letter-spacing: -.085em;
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 490px;
+  font-size: 19px;
+  color: #707070;
+  line-height: 1.7;
+  margin-top: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 17px;
+}
+
+.hero-note {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: .04em;
+}
+
+/* VISUAL */
+
+.hero-visual {
+  width: 480px;
+  height: 480px;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  overflow: visible;
+}
+
+.visual-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.045) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle, black, transparent 72%);
+}
+
+.visual-glow {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  background: #dcd5c3;
+  border-radius: 50%;
+  filter: blur(75px);
+  opacity: .65;
+}
+
+.visual-orbit {
+  position: absolute;
+  width: 100%;
+  height: 42%;
+  border: 1px solid rgba(120, 116, 101, .35);
+  border-radius: 50%;
+}
+
+.visual-orbit.orbit-one {
+  transform: rotate(-35deg);
+}
+
+.visual-orbit.orbit-two {
+  transform: rotate(55deg);
+}
+
+.visual-orbit.orbit-three {
+  width: 75%;
+  height: 75%;
+  border-color: rgba(120, 116, 101, .15);
+}
+
+.visual-core {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #292a28, #080909);
+  color: #f5f3eb;
+  display: grid;
+  place-items: center;
+  font-size: 66px;
+  font-weight: 400;
+  box-shadow: 0 25px 70px rgba(0,0,0,.2);
+  z-index: 2;
+}
+
+.visual-core span {
+  font-family: Georgia, serif;
+}
+
+.visual-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #b5a16b;
+  z-index: 3;
+}
+
+.visual-dot.dot-one {
+  top: 65px;
+  left: 100px;
+}
+
+.visual-dot.dot-two {
+  bottom: 80px;
+  right: 75px;
+  background: #292a28;
+}
+
+.visual-caption {
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: .13em;
+  color: #92928a;
+}
+
+/* BOTTOM LABELS */
+
+.hero-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 8vw;
+  right: 8vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 9px;
+  letter-spacing: .13em;
+  color: #999;
+}
+
+/* MOTION */
+
+.visual-orbit.orbit-one {
+  animation: heroOrbit 30s linear infinite;
+}
+
+.visual-orbit.orbit-two {
+  animation: heroOrbit 40s linear infinite reverse;
+}
+
+.visual-core {
+  animation: heroFloat 5s ease-in-out infinite;
+}
+
+@keyframes heroOrbit {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .research-hero {
+    min-height: 850px;
+    align-items: flex-start;
+    padding-top: 100px;
+  }
+
+  .hero-visual {
+    width: 380px;
+    height: 380px;
+    top: auto;
+    bottom: 65px;
+    right: 50%;
+    transform: translateX(50%);
+    opacity: .75;
+  }
+
+  .hero-bottom {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .research-hero {
+    min-height: 900px;
+    padding: 85px 6vw 70px;
+  }
+
+  .research-hero h1 {
+    font-size: clamp(55px, 13vw, 76px);
+  }
+
+  .hero-description {
+    font-size: 17px;
+  }
+
+  .hero-visual {
+    width: 310px;
+    height: 310px;
+    bottom: 65px;
+  }
+
+  .visual-core {
+    width: 95px;
+    height: 95px;
+    font-size: 48px;
+  }
+}
+
+
+.hero-visual {
+  position: absolute;
+  width: min(55vw, 650px);
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.solar-system-art {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .hero-visual {
+    width: 75vw;
+    right: -10%;
+    top: 58%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-visual {
+    width: 100vw;
+    right: -10%;
+    top: auto;
+    bottom: 60px;
+    transform: none;
+  }
+}
