@@ -293,3 +293,106 @@ We do not claim to have established the final answer. We are working to investig
 **AIES begins with one question: What if an economy could be designed not only to exchange value, but also to rethink who gets to participate in its profits?**
 
 That is the question we are working to answer.
+
+# Understanding the Equal Profits Model: Beyond the Conventional Transaction
+
+**What if buying a product could mean more than receiving the product itself?**
+
+In a conventional economy, customers purchase goods and services, while businesses generate revenue and seek to earn profits. These transactions are the foundation of everyday commerce.
+
+AIES explores a different possibility through its central principle: Equal Profits.
+
+The purpose of this article is to explain the concept and its intended direction without disclosing the confidential mechanism currently under development.
+
+## The Conventional Transaction
+
+Imagine a customer purchasing a product from a local shop.
+
+The product costs ₹100. The customer pays ₹100 and receives the product.
+
+Suppose the shopkeeper's profit from this sale is ₹20 after accounting for the relevant costs.
+
+The immediate outcome is straightforward:
+
+- The customer receives a product worth ₹100.
+- The shopkeeper receives the revenue and earns ₹20 in profit, assuming the stated costs have been accounted for.
+
+This is a familiar transaction. The customer obtains a good, and the business earns a potential profit.
+
+But AIES asks a different question: What if the economic outcome could be structured differently?
+
+## The Equal Profits Concept
+
+Now consider the same ₹100 purchase under the conceptual framework that AIES seeks to develop.
+
+The shopkeeper sells the product and earns ₹20 in profit. Under the intended Equal Profits model, the customer would also receive the product and an additional ₹20 profit outcome.
+
+In this illustration, both participants receive a ₹20 profit outcome associated with the transaction.
+
+The example communicates the intended concept. It is not a claim that this outcome has already been demonstrated in real-world transactions, nor does it explain how the additional customer profit would be financed or delivered.
+
+Those questions belong to the model's confidential mechanism and ongoing validation.
+
+## What Is the Fundamental Difference?
+
+The difference lies in the intended economic outcome.
+
+In a conventional purchase, the customer exchanges money for a product. The seller may generate profit from the transaction.
+
+Under the Equal Profits vision, AIES explores a model in which the customer could receive the purchased product alongside a profit outcome, while the seller also earns profit.
+
+This introduces a different question about economic participation: Can a system be structured so that the benefits of a transaction extend beyond the conventional buyer–seller exchange?
+
+AIES is investigating this question through its proposed model.
+
+## What Does Equal Profits Mean for AIES?
+
+Equal Profits is the guiding principle of AIES, not merely a feature added to an ordinary software product.
+
+It expresses the intended direction of the economic model: exploring a structure in which profit outcomes can be pursued according to a defined principle of equality.
+
+However, the meaning of equality must be carefully specified. It matters whether equality refers to individual transactions, participants over a defined period, or another measurable unit.
+
+The model must also account for business costs, financial resources, operational risks, and changing economic conditions.
+
+These questions are part of the research required to turn the concept into a viable system.
+
+## Why Keep the Mechanism Confidential?
+
+An economic concept and the mechanism used to implement it are not the same thing.
+
+AIES can publicly explain its mission, intended outcomes, development stages, and research questions without disclosing its internal implementation logic.
+
+The exact mechanism behind the Equal Profits model remains confidential while the project is being developed.
+
+This allows us to communicate the central idea while protecting the detailed work that may be important to its implementation.
+
+Confidentiality does not remove the need for future accountability. If the model advances toward real-world use, its financial implications, operating rules, participant obligations, and applicable legal requirements will need to be addressed appropriately.
+
+## The Challenge of Making Equal Profits Practical
+
+An idea becomes meaningful as an economic model only when its outcomes can be explained and tested.
+
+AIES must examine how the intended profit outcomes could be achieved, whether the system can remain financially sustainable, and how it would respond to changing conditions.
+
+The model must also be evaluated for unintended consequences. For example, an approach that creates incentives for excessive transactions or shifts financial risks unfairly would need to be reconsidered.
+
+The goal is not simply to describe equal profits. It is to investigate whether the underlying concept can be implemented responsibly.
+
+## What Comes Next?
+
+AIES is developing its model through structured experimentation and machine-learning research. The current work provides an initial basis for testing assumptions, but synthetic-data experiments do not establish real-world feasibility.
+
+Further validation is needed before the intended outcomes can be considered demonstrated.
+
+Our next steps are to strengthen the model, identify the data required for meaningful evaluation, and determine how the concept can be tested under realistic economic conditions.
+
+## Conclusion
+
+The Equal Profits model begins with a simple illustration: a customer purchases a product, the seller earns a profit, and the system explores whether the customer could also receive a profit outcome.
+
+The underlying mechanism remains confidential, but the vision is clear.
+
+AIES seeks to investigate a different relationship between economic transactions and profit participation, with the long-term ambition of contributing to greater financial freedom.
+
+**Equal Profits is the principle. Developing a practical, sustainable model is the challenge.**
