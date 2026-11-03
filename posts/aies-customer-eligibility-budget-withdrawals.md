@@ -1,4 +1,3 @@
-
 ---
 title: "AIES Equal Profits: Customer Eligibility, Monthly Shopping Budget and Withdrawals"
 date: "2026-11-03"
