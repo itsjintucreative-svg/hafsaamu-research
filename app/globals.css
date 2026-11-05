@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
 :root {
   --bg: #fafaf8;
   --text: #151515;
@@ -1369,4 +1369,12 @@ a {
     height: 780px;
     border-radius: 14px;
   }
+}
+
+.aies-description {
+  font-family: 'Courier Prime', monospace;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 570px;
 }

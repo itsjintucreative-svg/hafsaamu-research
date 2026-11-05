@@ -21,11 +21,11 @@ export default function Home() {
             Building the future.
           </h1>
 
-          <p className="hero-description">
-            Independent research into artificial intelligence,
-            economic systems, and technologies shaping
-            the future of our world.
-          </p>
+          <p className="hero-description aies-description">
+  When a customer buys a ₹100 product, the seller earns
+  a profit. AIES aims to give the customer an equal profit
+  benefit — if the seller earns ₹20, the customer gets ₹20 too.
+</p>
 
           <Link href="/blog" className="primary-link">
             Explore our research →
