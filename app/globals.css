@@ -1589,3 +1589,32 @@ a {
     ),
     #f1f1ed;
 }
+
+
+/* Article content images */
+.prose img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  margin: 40px auto;
+  border-radius: 16px;
+}
+
+/* Article image captions */
+.prose p:has(img) {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+  .prose img {
+    margin: 28px auto;
+    border-radius: 12px;
+  }
+}

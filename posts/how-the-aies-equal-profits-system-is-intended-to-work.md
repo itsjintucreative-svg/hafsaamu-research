@@ -1,6 +1,6 @@
 ---
 title: "How the AIES Equal Profits System Is Intended to Work"
-image: "/media/aies35.jpg"
+
 date: "2026-11-03"
 category: "Economic Research"
 author: "Hafsaamu Research"
@@ -11,6 +11,8 @@ excerpt: "An overview of the proposed customer journey, fund contribution, parti
 
 
 AIES (Auto Income Eco System), operating through Hafsaamu, aims to develop an economic ecosystem based on its Equal Profits model.
+
+![AIES Economic Model](/media/aies35.jpg)
 
 Once the first group of participating shops has completed onboarding and the system is ready for its intended operations, eligible customers will be able to register on the Hafsaamu website and access the AIES Equal Profits system, subject to the applicable rules and conditions.
 
