@@ -1451,3 +1451,141 @@ a {
   object-fit: contain;
   border-radius: inherit;
 }
+.latest-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+
+.latest-thumbnail {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 24px;
+  border-radius: 6px;
+}
+
+.article-cover {
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.article-cover img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =================================
+   LATEST ARTICLES — COMPACT DESIGN
+================================= */
+
+.latest-research {
+  padding: 90px 8vw;
+}
+
+.latest-research .section-top {
+  margin-bottom: 38px;
+}
+
+.latest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.latest-card,
+.latest-card:nth-child(even),
+.latest-card:nth-child(odd) {
+  padding: 24px 0;
+  border-right: none;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+
+.latest-thumbnail {
+  width: 100%;
+  height: 155px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 18px;
+  border-radius: 5px;
+}
+
+.latest-card .meta {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.latest-card h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  margin: 10px 0;
+}
+
+.latest-card > p:not(.meta) {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.latest-card > span {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .latest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .latest-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .latest-card,
+  .latest-card:nth-child(even) {
+    padding: 24px 0;
+    border-right: none;
+  }
+
+  .latest-thumbnail {
+    height: 190px;
+  }
+
+  .latest-card h3 {
+    font-size: 23px;
+  }
+}
+.latest-thumbnail-placeholder {
+  background:
+    radial-gradient(
+      ellipse at 50% 50%,
+      rgba(90, 110, 255, 0.55),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at 30% 40%,
+      rgba(80, 230, 190, 0.4),
+      transparent 65%
+    ),
+    #f1f1ed;
+}

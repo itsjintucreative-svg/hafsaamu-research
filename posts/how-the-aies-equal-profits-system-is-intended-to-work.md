@@ -1,5 +1,6 @@
 ---
 title: "How the AIES Equal Profits System Is Intended to Work"
+image: "/media/aies35.jpg"
 date: "2026-11-03"
 category: "Economic Research"
 author: "Hafsaamu Research"

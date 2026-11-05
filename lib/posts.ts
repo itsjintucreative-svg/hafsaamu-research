@@ -1,3 +1,4 @@
+
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -11,11 +12,14 @@ export type Post = {
   category: string;
   author: string;
   excerpt: string;
+  image?: string;
   content: string;
 };
 
 export function getAllPosts(): Post[] {
-  const files = fs.readdirSync(postsDirectory).filter((file) => file.endsWith(".md"));
+  const files = fs.readdirSync(postsDirectory).filter((file) =>
+    file.endsWith(".md")
+  );
 
   return files
     .map((file) => {
@@ -31,6 +35,7 @@ export function getAllPosts(): Post[] {
         category: data.category,
         author: data.author,
         excerpt: data.excerpt,
+        image: data.image || undefined,
         content,
       };
     })
@@ -39,6 +44,7 @@ export function getAllPosts(): Post[] {
 
 export function getPostBySlug(slug: string): Post | null {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
+
   if (!fs.existsSync(fullPath)) return null;
 
   const source = fs.readFileSync(fullPath, "utf8");
@@ -51,6 +57,7 @@ export function getPostBySlug(slug: string): Post | null {
     category: data.category,
     author: data.author,
     excerpt: data.excerpt,
+    image: data.image || undefined,
     content,
   };
 }

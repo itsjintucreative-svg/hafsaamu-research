@@ -141,24 +141,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LATEST ARTICLES */}
-      <section className="latest-research">
-        <div className="section-top">
-          <div>
-            <p className="eyebrow">LATEST PUBLICATIONS</p>
-            <h2>Recent research.</h2>
+        {/* LATEST ARTICLES */}
+        <section className="latest-research">
+          <div className="section-top">
+            <div>
+              <p className="eyebrow">LATEST PUBLICATIONS</p>
+              <h2>Recent research.</h2>
+            </div>
+
+            <Link href="/blog">All articles →</Link>
           </div>
 
-          <Link href="/blog">All articles →</Link>
-        </div>
+          <div className="latest-grid">
+            {latest.map((post) => (
+              <Link
+                href={`/blog/${post.slug}`}
+                className="latest-card"
+                key={post.slug}
+              >
+              
+  {post.image && (
+    <img
+      src={post.image}
+      alt={post.title}
+      className="latest-thumbnail"
+    />
+  )}
 
-        <div className="latest-grid">
-          {latest.map((post) => (
-            <Link
-              href={`/blog/${post.slug}`}
-              className="latest-card"
-              key={post.slug}
-            >
               <p className="meta">
                 {post.category} · {post.date}
               </p>

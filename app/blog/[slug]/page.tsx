@@ -41,13 +41,14 @@ export default async function PostPage({
       alt="A Vision for an Equal Profits Economy"
     />
   </div>
-) : (
-  <div className="article-art">
-    <div className="big-a">A</div>
-    <div className="big-orbit orbit-a" />
-    <div className="big-orbit orbit-b" />
+) : post.image ? (
+  <div className="article-cover">
+    <img
+      src={post.image}
+      alt={post.title}
+    />
   </div>
-)}
+) : null}
 
       <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
       {slug === "aies-v1-research-simulation" && (
