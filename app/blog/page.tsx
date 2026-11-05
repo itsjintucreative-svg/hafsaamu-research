@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
@@ -17,12 +18,34 @@ export default function BlogIndex() {
 
       <div className="article-list">
         {posts.map((post) => (
-          <Link href={`/blog/${post.slug}`} className="article-row" key={post.slug}>
-            <div>
-              <p className="meta">{post.category} · {post.date}</p>
+          <Link
+            href={`/blog/${post.slug}`}
+            className={`article-row ${
+              post.slug === "introducing-aies" ? "article-row-featured" : ""
+            }`}
+            key={post.slug}
+          >
+            {post.slug === "introducing-aies" && (
+              <div className="article-row-image">
+                <img
+                  src="/media/aies-thumbnail.jpg"
+                  alt="A Vision for an Equal Profits Economy"
+                />
+              </div>
+            )}
+
+            <div className="article-row-content">
+              <p className="meta">
+                {post.category} · {post.date}
+              </p>
+
               <h2>{post.title}</h2>
+
               <p>{post.excerpt}</p>
+
+              <span className="article-read">Read article →</span>
             </div>
+
             <span className="arrow">↗</span>
           </Link>
         ))}

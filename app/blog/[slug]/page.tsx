@@ -34,11 +34,20 @@ export default async function PostPage({
         <p className="byline">{post.date} · {post.author}</p>
       </header>
 
-      <div className="article-art">
-        <div className="big-a">A</div>
-        <div className="big-orbit orbit-a" />
-        <div className="big-orbit orbit-b" />
-      </div>
+     {slug === "introducing-aies" ? (
+  <div className="article-thumbnail">
+    <img
+      src="/media/aies-thumbnail.jpg"
+      alt="A Vision for an Equal Profits Economy"
+    />
+  </div>
+) : (
+  <div className="article-art">
+    <div className="big-a">A</div>
+    <div className="big-orbit orbit-a" />
+    <div className="big-orbit orbit-b" />
+  </div>
+)}
 
       <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
       {slug === "aies-v1-research-simulation" && (

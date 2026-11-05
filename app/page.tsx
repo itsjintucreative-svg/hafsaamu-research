@@ -73,11 +73,21 @@ export default function Home() {
             className="featured-layout"
           >
             <div className="featured-visual">
-              <div className="featured-grid" />
-              <div className="featured-orbit orbit-one" />
-              <div className="featured-orbit orbit-two" />
-              <div className="featured-symbol">A</div>
-            </div>
+  {featured.slug === "introducing-aies" ? (
+    <img
+      src="/media/aies-thumbnail.jpg"
+      alt="A Vision for an Equal Profits Economy"
+      className="featured-thumbnail"
+    />
+  ) : (
+    <>
+      <div className="featured-grid" />
+      <div className="featured-orbit orbit-one" />
+      <div className="featured-orbit orbit-two" />
+      <div className="featured-symbol">A</div>
+    </>
+  )}
+</div>
 
             <div className="featured-info">
               <p className="meta">
