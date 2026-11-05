@@ -16,9 +16,9 @@ export default function Home() {
           <p className="eyebrow">HAFSAAMU RESEARCH</p>
 
           <h1>
-            Exploring ideas.
+            A New Way
             <br />
-            Building the future.
+            To Share Prosperity.
           </h1>
 
           <p className="hero-description aies-description">
