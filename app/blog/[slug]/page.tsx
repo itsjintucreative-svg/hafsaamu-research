@@ -41,6 +41,26 @@ export default async function PostPage({
       </div>
 
       <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+      {slug === "aies-v1-research-simulation" && (
+  <section className="aies-demo-section">
+    <div className="aies-demo-heading">
+      <p className="eyebrow">INTERACTIVE EXPERIENCE</p>
+      <h2>Experience AIES V1</h2>
+      <p>
+        Explore the AIES Hafsaamu user journey
+        through an interactive simulation.
+      </p>
+    </div>
+
+    <iframe
+      src="/aies-demo/index.html"
+      title="AIES Hafsaamu Interactive Demo"
+      className="aies-demo-frame"
+      loading="lazy"
+      allow="clipboard-write"
+    />
+  </section>
+)}
     </main>
   );
 }
