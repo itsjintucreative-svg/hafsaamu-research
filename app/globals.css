@@ -1808,3 +1808,67 @@ a {
     height: 220px;
   }
 }
+
+/* =================================
+   HAFSAAMU HERO TYPEWRITER ANIMATION
+================================= */
+
+.typewriter {
+  border: none;
+  white-space: normal;
+}
+
+.type-line {
+  display: block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* First line */
+.first-line {
+  border-right: none;
+  animation: typing-first 1s steps(9, end) forwards;
+}
+
+/* Second line */
+.second-line {
+  font-size: 0.82em; /* Add this line */
+  border-right: 3px solid currentColor;
+  animation:
+    typing-second 2s steps(20, end) 1s forwards,
+    blink 0.7s step-end infinite;
+}
+
+/* Typing animations */
+@keyframes typing-first {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9ch;
+  }
+}
+
+@keyframes typing-second {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .type-line {
+    font-size: inherit;
+  }
+}

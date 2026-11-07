@@ -15,11 +15,10 @@ export default function Home() {
         <div className="hero-inner">
           <p className="eyebrow">HAFSAAMU RESEARCH</p>
 
-          <h1>
-            A New Way
-            <br />
-            To Share Prosperity.
-          </h1>
+          <h1 className="typewriter">
+  <span className="type-line first-line">A New Way</span>
+  <span className="type-line second-line">To Share Prosperity.</span>
+</h1>
 
           <p className="hero-description aies-description">
   When a customer buys a ₹100 product, the seller earns
