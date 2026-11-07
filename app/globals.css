@@ -1618,3 +1618,193 @@ a {
     border-radius: 12px;
   }
 }
+/* HAFSAAMU PRODUCTS */
+
+.products-section {
+  padding: 120px 8%;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.products-heading {
+  max-width: 600px;
+  margin-bottom: 55px;
+}
+
+.products-heading h2 {
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  margin: 18px 0;
+  font-weight: 500;
+}
+
+.products-heading > p:last-child {
+  color: #777;
+  line-height: 1.8;
+  max-width: 480px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  display: block;
+  text-decoration: none;
+  color: #171717;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #aaa;
+}
+
+.product-top {
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-family: monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.product-visual {
+  height: 260px;
+  margin: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.aies-product-visual {
+  background: #f7f7f5;
+}
+
+.product-orbit {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product-orbit::before,
+.product-orbit::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 75px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+
+.product-orbit::after {
+  transform: rotate(30deg);
+}
+
+.product-orbit-core {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #171717;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.hotelix-product-visual {
+  background: #101a2b;
+  color: white;
+}
+
+.hotelix-visual-content {
+  width: 78%;
+}
+
+.hotelix-visual-label,
+.hotelix-visual-footer {
+  font-family: monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #aab6c8;
+}
+
+.hotelix-chart {
+  height: 115px;
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  border-bottom: 1px solid #40506a;
+  padding: 0 5px;
+  margin: 22px 0 15px;
+}
+
+.hotelix-chart span {
+  flex: 1;
+  background: linear-gradient(to top, #587ba8, #b5d3f2);
+  border-radius: 3px 3px 0 0;
+}
+
+.hotelix-chart span:nth-child(1) { height: 30%; }
+.hotelix-chart span:nth-child(2) { height: 48%; }
+.hotelix-chart span:nth-child(3) { height: 40%; }
+.hotelix-chart span:nth-child(4) { height: 65%; }
+.hotelix-chart span:nth-child(5) { height: 55%; }
+.hotelix-chart span:nth-child(6) { height: 82%; }
+.hotelix-chart span:nth-child(7) { height: 100%; }
+
+.hotelix-visual-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-info {
+  padding: 28px 25px 30px;
+}
+
+.product-info h3 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.product-info p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 400px;
+  margin-bottom: 22px;
+}
+
+.product-info > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .products-section {
+    padding: 80px 6%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-visual {
+    height: 220px;
+  }
+}

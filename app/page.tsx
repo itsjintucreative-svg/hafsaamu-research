@@ -60,6 +60,83 @@ export default function Home() {
         </p>
       </section>
 
+            {/* HAFSAAMU PRODUCTS */}
+      <section className="products-section">
+        <div className="products-heading">
+          <p className="eyebrow">BUILT BY HAFSAAMU</p>
+          <h2>Ideas becoming intelligent systems.</h2>
+          <p>
+            Independent products and research systems designed
+            to solve real-world problems through technology.
+          </p>
+        </div>
+
+        <div className="products-grid">
+
+          {/* AIES */}
+          <Link href="/blog/introducing-aies" className="product-card">
+            <div className="product-top">
+              <span>01 / ECONOMIC SYSTEM</span>
+              <span>↗</span>
+            </div>
+
+            <div className="product-visual aies-product-visual">
+              <div className="product-orbit">
+                <div className="product-orbit-core">A</div>
+              </div>
+            </div>
+
+            <div className="product-info">
+              <h3>AIES Hafsaamu</h3>
+              <p>
+                Exploring a new economic model built around
+                equal profits and intelligent capital allocation.
+              </p>
+              <span>Explore AIES →</span>
+            </div>
+          </Link>
+
+          {/* HOTELIX */}
+          <Link href="/hotelix" className="product-card">
+            <div className="product-top">
+              <span>02 / HOTEL INTELLIGENCE</span>
+              <span>↗</span>
+            </div>
+
+            <div className="product-visual hotelix-product-visual">
+              <div className="hotelix-visual-content">
+                <span className="hotelix-visual-label">
+                  FINANCIAL INTELLIGENCE
+                </span>
+                <div className="hotelix-chart">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <div className="hotelix-visual-footer">
+                  <span>REVENUE</span>
+                  <span>ML / FORECASTING</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="product-info">
+              <h3>Hafsaamu Hotelix</h3>
+              <p>
+                Local-first financial intelligence that helps
+                hotels understand performance and predict future trends.
+              </p>
+              <span>Explore Hotelix →</span>
+            </div>
+          </Link>
+
+        </div>
+      </section>
+
       {/* FEATURED RESEARCH */}
       {featured && (
         <section className="featured-research">
