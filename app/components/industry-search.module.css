@@ -1,4 +1,8 @@
 
+/* =========================================
+   HAFSAAMU INDUSTRY SEARCH
+========================================= */
+
 .hero {
   min-height: 650px;
   display: flex;
@@ -14,6 +18,8 @@
   margin: 0 auto;
 }
 
+/* EYEBROW */
+
 .eyebrow {
   font-size: 11px;
   font-weight: 600;
@@ -22,19 +28,53 @@
   margin-bottom: 32px;
 }
 
-.hero h1 {
+/* =========================================
+   HEADLINE
+========================================= */
+
+.headline {
+  margin: 0;
   font-size: clamp(42px, 6vw, 76px);
   line-height: 1.06;
   letter-spacing: -4px;
   font-weight: 500;
-  color: #111;
-  margin: 0;
 }
 
-.hero h1 span {
+.headline span {
   display: block;
-  color: #858585;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
 }
+
+/* FIRST LINE */
+
+.headline .lineOne {
+  color: #000;
+  animation: firstTyping 1.8s steps(22, end) 0s both;
+}
+
+/* SECOND LINE */
+
+.headline .lineTwo {
+  color: #858585;
+  animation: secondTyping 2.5s steps(30, end) 1.85s both;
+}
+
+/* ANIMATIONS */
+
+@keyframes firstTyping {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes secondTyping {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* DESCRIPTION */
 
 .description {
   max-width: 540px;
@@ -43,6 +83,10 @@
   font-size: 16px;
   line-height: 1.8;
 }
+
+/* =========================================
+   SEARCH BOX
+========================================= */
 
 .searchArea {
   width: 100%;
@@ -101,6 +145,10 @@
   background: #e5e5e5;
 }
 
+/* =========================================
+   SUGGESTIONS
+========================================= */
+
 .suggestions {
   display: flex;
   flex-wrap: wrap;
@@ -125,6 +173,10 @@
   background: #f5f5f5;
   border-color: #aaa;
 }
+
+/* =========================================
+   SEARCH RESULTS
+========================================= */
 
 .results {
   margin-top: 25px;
@@ -208,12 +260,16 @@
   color: #999;
 }
 
+/* FOOTER */
+
 .bottomNote {
   margin-top: 55px;
   font-size: 11px;
   letter-spacing: 1.5px;
   color: #aaa;
 }
+
+/* RESULTS ANIMATION */
 
 @keyframes appear {
   from {
@@ -226,15 +282,33 @@
   }
 }
 
+/* =========================================
+   MOBILE
+========================================= */
+
 @media (max-width: 600px) {
+
   .hero {
     min-height: 580px;
     padding: 80px 22px;
   }
 
-  .hero h1 {
-    font-size: 43px;
-    letter-spacing: -2px;
+  .headline {
+    font-size: clamp(23px, 6.5vw, 34px);
+    letter-spacing: -1.2px;
+    line-height: 1.2;
+  }
+
+  .headline span {
+    white-space: nowrap;
+  }
+
+  .headline .lineOne {
+    animation: firstTyping 1.8s steps(22, end) 0s both;
+  }
+
+  .headline .lineTwo {
+    animation: secondTyping 2.5s steps(30, end) 1.85s both;
   }
 
   .description {
@@ -260,88 +334,17 @@
   }
 }
 
-/* TYPEWRITER HEADLINE */
-
-.headline {
-  margin: 0;
-  font-size: clamp(32px, 6vw, 76px);
-  line-height: 1.06;
-  letter-spacing: -3px;
-  font-weight: 500;
-}
-
-.headline span {
-  display: block;
-  width: 0;
-  max-width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/* FIRST LINE */
-
-.headline .lineOne {
-  color: #000000 !important;
-  animation: typing-first 1.8s steps(22, end) forwards;
-}
-
-/* SECOND LINE */
-
-.lineTwo {
-  color: #858585;
-  animation: typing-second 2.5s steps(30, end) 2s forwards;
-}
-
-/* ANIMATION */
-
-@keyframes typing-first {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-second {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* MOBILE RESPONSIVE */
-
-@media (max-width: 600px) {
-  .headline {
-    font-size: clamp(23px, 5.5vw, 34px);
-    letter-spacing: -1.2px;
-    line-height: 1.2;
-  }
-
-  .headline span {
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  .lineOne {
-    animation: typing-first 1.8s steps(22, end) forwards;
-  }
-
-  .lineTwo {
-    animation: typing-second 2.5s steps(30, end) 2s forwards;
-  }
-}
-
 /* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   .headline span {
     width: 100%;
-    animation: none;
+    animation: none !important;
     overflow: visible;
     white-space: normal;
+  }
+
+  .results {
+    animation: none;
   }
 }
