@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
+import IndustrySearch from "./components/industry-search";
 
 export default function Home() {
   const posts = getAllPosts();
@@ -10,37 +11,9 @@ export default function Home() {
   return (
     <main className="research-home">
 
-      {/* HERO */}
-      <section className="research-hero">
-        <div className="hero-inner">
-          <p className="eyebrow">HAFSAAMU RESEARCH</p>
+      {/* INDUSTRY DISCOVERY HERO */}
+<IndustrySearch />
 
-          <h1 className="typewriter">
-  <span className="type-line first-line">A New Way</span>
-  <span className="type-line second-line">To Share Prosperity.</span>
-</h1>
-
-          <p className="hero-description aies-description">
-  When a customer buys a ₹100 product, the seller earns
-  a profit. AIES aims to give the customer an equal profit
-  benefit — if the seller earns ₹20, the customer gets ₹20 too.
-</p>
-
-          <Link href="/blog" className="primary-link">
-            Explore our research →
-          </Link>
-        </div>
-
-        
-<div className="hero-visual">
-  <img
-    src="/media/solar%20system.svg"
-    alt="Solar System"
-    className="solar-system-art"
-  />
-</div>
-
-      </section>
 
       {/* INTRODUCTION */}
       <section className="research-intro">
