@@ -14,6 +14,9 @@ const plexMono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
+const DOWNLOAD_URL =
+  "https://drive.google.com/uc?export=download&id=1Ykdw-DpfYAjVepWsYoDjSO0uLUsSQFcP";
+
 const features = [
   {
     number: "01",
@@ -25,7 +28,7 @@ const features = [
     number: "02",
     title: "Custom Machine Learning",
     description:
-      "Hotelix trains a machine learning model using your hotel's own revenue and expense history.",
+      "Hotelix trains machine learning models using your hotel's own revenue and expense history.",
   },
   {
     number: "03",
@@ -37,7 +40,7 @@ const features = [
     number: "04",
     title: "Intelligent Forecasting",
     description:
-      "Generate estimates for expected revenue, projected expenses and anticipated profits from your hotel's data.",
+      "Generate estimates for expected revenue and occupancy using your hotel's historical data.",
   },
 ];
 
@@ -48,7 +51,7 @@ export default function HotelixPage() {
         <Link href="/hotelix" className={styles.logo}>
           &gt; HAFSAAMU_HOTELIX<span className={styles.cursor}>_</span>
         </Link>
-        <span className={styles.version}>[ MVP 1.0 ]</span>
+        <span className={styles.version}>[ V1.2.0 ]</span>
       </header>
 
       <div className={styles.container}>
@@ -66,24 +69,22 @@ export default function HotelixPage() {
           <p className={styles.intro}>
             Hafsaamu Hotelix is a local-first machine learning system that
             turns your daily financial records into intelligent revenue and
-            expense predictions.
+            occupancy predictions.
           </p>
 
-          <a href="#apply" className={styles.button}>
-            Apply for Early Access
+          <a href="#download" className={styles.button}>
+            Download Hotelix V1.2.0 ↓
           </a>
-          <Link
-  href="/hotelix/docs"
-  className={styles.documentationLink}
->
-  <span className={styles.typingText}>
-    Read MVP 1 Documentation
-  </span>
-  <span className={styles.animatedArrow}>↗</span>
-</Link>
+
+          <Link href="/hotelix/docs" className={styles.documentationLink}>
+            <span className={styles.typingText}>
+              Read Hotelix Documentation
+            </span>
+            <span className={styles.animatedArrow}>↗</span>
+          </Link>
 
           <p className={styles.note}>
-            No credit card required. Local installation only.
+            Windows 10/11 · Local installation · No mandatory cloud account
           </p>
         </section>
 
@@ -112,7 +113,7 @@ export default function HotelixPage() {
 
         <section className={styles.features}>
           <h2 className={styles.sectionTitle}>
-            Key Features <span>[ MVP 1 ]</span>
+            Key Features <span>[ V1 ]</span>
           </h2>
 
           <div className={styles.featureGrid}>
@@ -127,17 +128,71 @@ export default function HotelixPage() {
           </div>
         </section>
 
+        {/* Latest Release */}
+        <section id="download" className={styles.release}>
+          <p className={styles.eyebrow}>LATEST PUBLIC RELEASE</p>
+
+          <div className={styles.releaseHeader}>
+            <div>
+              <h2>Hotelix V1.2.0</h2>
+              <p>
+                Your hotel's financial intelligence system. Ready for local
+                Windows installation.
+              </p>
+            </div>
+            <span className={styles.releaseBadge}>PUBLIC BETA</span>
+          </div>
+
+          <div className={styles.releaseMeta}>
+            <span>VERSION: 1.2.0</span>
+            <span>PLATFORM: WINDOWS 10/11</span>
+            <span>PYTHON: 3.12</span>
+          </div>
+
+          <a
+            href={DOWNLOAD_URL}
+            className={styles.button}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Windows Installer ↓
+          </a>
+
+          <p className={styles.note}>
+            ZIP package · Google Drive · Free to download
+          </p>
+
+          <div className={styles.releaseSteps}>
+            <h3>Getting Started</h3>
+            <ol>
+              <li>Download the Hotelix V1.2.0 ZIP package.</li>
+              <li>Extract the ZIP into a folder on your Windows computer.</li>
+              <li>Install Python 3.12 (64-bit), if not already installed.</li>
+              <li>Run install_windows.bat to install dependencies.</li>
+              <li>Run run_windows.bat to launch Hotelix.</li>
+            </ol>
+          </div>
+
+          <p className={styles.releaseDisclaimer}>
+            Hotelix V1.2.0 is a local-first public beta. Forecasts are
+            estimates based on available hotel data and should support,
+            not replace, business decisions.
+          </p>
+        </section>
+
         <section id="apply" className={styles.apply}>
           <p className={styles.eyebrow}>EARLY ACCESS PROGRAM</p>
           <h2>Help Us Build the Future of Hotel Intelligence.</h2>
           <p>
             We are inviting independent hotel owners, managers and finance
-            teams to test Hotelix MVP 1. We provide the software; you provide
-            real-world testing and feedback.
+            teams to test Hotelix and share real-world feedback. Your
+            experience will help shape future releases.
           </p>
-          <a href="mailto:hello@hafsaamu.world?subject=Hotelix%20Early%20Access"
-             className={styles.button}>
-            Request MVP 1 Package
+          <a
+            href="mailto:hello@hafsaamu.world?subject=Hotelix%20Early%20Access"
+            className={styles.button}
+          >
+            Contact Hafsaamu
           </a>
         </section>
       </div>
