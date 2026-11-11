@@ -6,15 +6,14 @@ import ProductsShowcase from "./components/products-showcase";
 
 export default function Home() {
   const posts = getAllPosts();
+
   const featured = posts[0];
   const latest = posts.slice(1);
-  const sideStories = latest.slice(0, 3);
-const remainingStories = latest.slice(3);
 
   const featuredImage =
     featured?.image ||
     (featured?.slug === "introducing-aies"
-      ? "/media/aies-thumbnail.jpg"
+      ? "/media/aies-equal-profits-system.jpg"
       : null);
 
   return (
@@ -24,6 +23,7 @@ const remainingStories = latest.slice(3);
       {/* LATEST RESEARCH */}
       {featured && (
         <section className="journal-section">
+
           <div className="journal-heading">
             <div>
               <p className="eyebrow">HAFSAAMU JOURNAL</p>
@@ -35,8 +35,9 @@ const remainingStories = latest.slice(3);
             </Link>
           </div>
 
+          {/* FEATURED ARTICLE */}
           <div className="journal-lead">
-            {/* FEATURED STORY */}
+
             <article className="journal-featured">
               <Link
                 href={`/blog/${featured.slug}`}
@@ -77,57 +78,12 @@ const remainingStories = latest.slice(3);
               </div>
             </article>
 
-            {/* LATEST STORIES */}
-            {sideStories.length > 0 && (
-              <div className="journal-side">
-                {sideStories.map((post) => (
-                  <article
-                    className="journal-side-story"
-                    key={post.slug}
-                  >
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      className="journal-side-image"
-                    >
-                      {post.image ? (
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="journal-image-placeholder">
-                          <span>H.</span>
-                        </div>
-                      )}
-                    </Link>
-
-                    <div className="journal-side-content">
-                      <p className="journal-meta">
-                        {post.category} <span>·</span> {post.date}
-                      </p>
-
-                      <Link href={`/blog/${post.slug}`}>
-                        <h3>{post.title}</h3>
-                      </Link>
-
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="journal-read-link"
-                      >
-                        Read article <span>↗</span>
-                      </Link>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            )}
           </div>
 
-          {/* MORE ARTICLES */}
-          {remainingStories.length > 0 && (
+          {/* ALL REMAINING ARTICLES */}
+          {latest.length > 0 && (
             <div className="journal-more">
-              {remainingStories.map((post) => (
+              {latest.map((post) => (
                 <article
                   className="journal-more-story"
                   key={post.slug}
@@ -171,11 +127,12 @@ const remainingStories = latest.slice(3);
               ))}
             </div>
           )}
+
         </section>
       )}
 
-     {/* HAFSAAMU PRODUCTS */}
-<ProductsShowcase />
+      {/* HAFSAAMU PRODUCTS */}
+      <ProductsShowcase />
 
       {/* RESEARCH AREAS */}
       <section className="research-areas">
@@ -183,6 +140,7 @@ const remainingStories = latest.slice(3);
         <h2>Research across disciplines.</h2>
 
         <div className="areas-grid">
+
           <div className="area-item">
             <span>01</span>
             <h3>Artificial Intelligence</h3>
@@ -209,6 +167,7 @@ const remainingStories = latest.slice(3);
               developed through research.
             </p>
           </div>
+
         </div>
       </section>
 
@@ -218,6 +177,7 @@ const remainingStories = latest.slice(3);
         <h2>Ideas are only the beginning.</h2>
         <Link href="/blog">Discover our work →</Link>
       </section>
+
     </main>
   );
 }
