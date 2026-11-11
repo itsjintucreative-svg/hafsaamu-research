@@ -8,7 +8,7 @@ import styles from "./industry-search.module.css";
 const industries = [
   {
     name: "Hospitality",
-    keywords: ["hotel", "hotels", "hospitality"],
+    keywords: ["hotel", "hotels", "hospitality", "hotelix"],
     product: "Hafsaamu Hotelix",
     description:
       "Revenue and occupancy forecasting using historical hotel data.",
@@ -54,8 +54,11 @@ const industries = [
   },
 ];
 
+const suggestions = ["Hotel", "Retail", "Healthcare", "Manufacturing"];
+
 export default function IndustrySearch() {
   const [query, setQuery] = useState("");
+  const [searchActive, setSearchActive] = useState(false);
 
   const results = useMemo(() => {
     const value = query.trim().toLowerCase();
@@ -63,14 +66,35 @@ export default function IndustrySearch() {
     if (!value) return [];
 
     return industries.filter((industry) => {
-      return (
-        industry.name.toLowerCase().includes(value) ||
-        industry.keywords.some((keyword) =>
-          keyword.includes(value)
-        )
-      );
+      const searchableText = [
+        industry.name,
+        industry.product,
+        industry.category,
+        ...industry.keywords,
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return searchableText.includes(value);
     });
   }, [query]);
+
+  function handleSearch(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (!query.trim()) {
+      setSearchActive(false);
+      return;
+    }
+
+    setQuery(query.trim());
+    setSearchActive(true);
+  }
+
+  function handleSuggestion(item: string) {
+    setQuery(item);
+    setSearchActive(true);
+  }
 
   return (
     <section className={styles.hero}>
@@ -86,54 +110,52 @@ export default function IndustrySearch() {
   </span>
 </h1>
 
-        <p className={styles.description}>
-          Exploring intelligent technology and research
-          solutions built around different industries.
-        </p>
-
         <div className={styles.searchArea}>
-          <div className={styles.searchBox}>
+          <form
+            className={styles.searchBox}
+            onSubmit={handleSearch}
+          >
             <span className={styles.searchIcon}>⌕</span>
 
             <input
               type="search"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => {
+                setQuery(e.target.value);
+                setSearchActive(true);
+              }}
               placeholder="Which industry are you exploring today?"
               aria-label="Search industries"
             />
 
             <button
-              type="button"
-              onClick={() => {
-                if (!query.trim()) {
-                  document.querySelector<HTMLInputElement>(
-                    `.${styles.searchBox} input`
-                  )?.focus();
-                }
-              }}
-              aria-label="Focus search"
+              type="submit"
+              aria-label="Search"
             >
               →
             </button>
-          </div>
+          </form>
 
           <div className={styles.suggestions}>
             <span>Explore:</span>
-            {["Hotel", "Retail", "Healthcare", "Manufacturing"].map(
-              (item) => (
-                <button
-                  key={item}
-                  onClick={() => setQuery(item)}
-                  type="button"
-                >
-                  {item}
-                </button>
-              )
-            )}
+
+            {suggestions.map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => handleSuggestion(item)}
+                className={
+                  query.toLowerCase() === item.toLowerCase()
+                    ? styles.activeSuggestion
+                    : ""
+                }
+              >
+                {item}
+              </button>
+            ))}
           </div>
 
-          {query.trim() && (
+          {searchActive && query.trim() && (
             <div className={styles.results}>
               <p className={styles.resultsLabel}>
                 INDUSTRY DISCOVERY
@@ -151,7 +173,6 @@ export default function IndustrySearch() {
                       </span>
 
                       <h3>{industry.product}</h3>
-
                       <p>{industry.description}</p>
                     </div>
 
@@ -160,7 +181,7 @@ export default function IndustrySearch() {
                         href={industry.href!}
                         className={styles.available}
                       >
-                        Available ↗
+                        Explore ↗
                       </Link>
                     ) : (
                       <span className={styles.coming}>
@@ -171,21 +192,21 @@ export default function IndustrySearch() {
                 ))
               ) : (
                 <div className={styles.empty}>
-                  <h3>Something new is waiting to be explored.</h3>
+                  <h3>
+                    Something new is waiting to be explored.
+                  </h3>
                   <p>
                     We haven't listed this industry yet.
                     Stay connected as Hafsaamu explores more possibilities.
                   </p>
-                  <span>MORE INDUSTRIES ARE ON THE HORIZON.</span>
+                  <span>
+                    MORE INDUSTRIES ARE ON THE HORIZON.
+                  </span>
                 </div>
               )}
             </div>
           )}
         </div>
-
-        <p className={styles.bottomNote}>
-          Research · Technology · Possibilities
-        </p>
       </div>
     </section>
   );

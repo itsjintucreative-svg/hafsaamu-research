@@ -1,5 +1,6 @@
 ---
 title: "AIES User Experience: From Discovering Local Businesses to Building a Digital Investment Portfolio"
+image: "/media/aies-v1-research-simulation.jpg"
 date: "2026-11-05"
 category: "PRODUCT EXPERIENCE"
 excerpt: "Explore the proposed AIES customer experience, from discovering local businesses to understanding financial performance and managing a digital portfolio."

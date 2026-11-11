@@ -2078,3 +2078,673 @@ a {
   border-color: #f5f5f5;
   transform: translateY(-3px);
 }
+
+/* =====================================
+   HAFSAAMU HOMEPAGE — EDITORIAL REFINEMENT
+===================================== */
+
+/* Minimal, borderless navigation */
+
+.site-header {
+  height: 76px;
+  padding: 0 8vw;
+  border-bottom: none;
+  background: rgba(250, 250, 248, 0.96);
+}
+
+.site-header nav {
+  gap: 32px;
+  color: #555;
+}
+
+.site-header nav a:hover {
+  color: #111;
+}
+
+/* Latest research section */
+
+.latest-research {
+  padding: 85px 8vw 110px;
+  background: #fafaf8;
+}
+
+.latest-research .section-top {
+  margin-bottom: 38px;
+}
+
+.latest-research .section-top h2 {
+  margin-top: 15px;
+}
+
+.featured-layout {
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 390px;
+  background: #f0f0ed;
+  overflow: hidden;
+}
+
+.featured-layout:hover {
+  background: #eaeae6;
+}
+
+.featured-visual {
+  min-height: 390px;
+}
+
+.featured-thumbnail {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.featured-info {
+  padding: 45px;
+}
+
+.featured-info h2 {
+  font-size: clamp(30px, 3.5vw, 46px);
+}
+
+.article-placeholder {
+  height: 100%;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at center, #424b49 0, #17201e 45%, #101615 100%);
+  color: #fff;
+}
+
+.article-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 130px;
+  font-weight: 400;
+}
+
+.article-placeholder small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #aeb8b1;
+}
+
+/* Latest article cards */
+
+.latest-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  border-top: none;
+  margin-top: 45px;
+}
+
+.latest-card,
+.latest-card:nth-child(odd),
+.latest-card:nth-child(even) {
+  display: block;
+  min-width: 0;
+  padding: 0 0 25px;
+  border: none;
+  background: transparent;
+}
+
+.latest-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #eeeee9;
+  margin-bottom: 19px;
+}
+
+.latest-thumbnail {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  transition: transform 0.5s ease;
+}
+
+.latest-card:hover .latest-thumbnail {
+  transform: scale(1.04);
+}
+
+.latest-thumbnail-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 45%, #d9d8ce, #eeeee9 70%);
+}
+
+.latest-thumbnail-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  color: #292b27;
+}
+
+.latest-card .meta {
+  margin: 0 0 10px;
+}
+
+.latest-card h3 {
+  font-size: 23px;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+.latest-card > p:not(.meta) {
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.latest-card > span {
+  display: inline-block;
+  margin-top: 14px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .featured-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-visual,
+  .article-placeholder {
+    min-height: 330px;
+  }
+
+  .latest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .site-header {
+    height: 68px;
+    padding: 0 6vw;
+  }
+
+  .latest-research {
+    padding: 65px 6vw 80px;
+  }
+
+  .featured-visual,
+  .article-placeholder {
+    min-height: 240px;
+  }
+
+  .featured-info {
+    padding: 30px 24px;
+  }
+
+  .latest-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .latest-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* =========================================
+   HAFSAAMU JOURNAL — EDITORIAL REDESIGN
+========================================= */
+
+.journal-section {
+  width: min(100% - 64px, 1450px);
+  margin: 100px auto 130px;
+}
+
+.journal-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 38px;
+}
+
+.journal-heading h2 {
+  margin: 12px 0 0;
+  font-size: clamp(42px, 5vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -3.5px;
+  font-weight: 500;
+}
+
+.journal-explore {
+  color: #171717;
+  text-decoration: none;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+
+.journal-explore span,
+.journal-read-link span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.journal-explore:hover span,
+.journal-read-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+/* Main editorial layout */
+
+.journal-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1.9fr) minmax(280px, 0.9fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.journal-featured,
+.journal-side-story,
+.journal-more-story {
+  min-width: 0;
+}
+
+.journal-featured-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+  background: #eeede9;
+}
+
+.journal-featured-image img,
+.journal-side-image img,
+.journal-more-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(.2,.7,.2,1);
+}
+
+.journal-featured-image:hover img,
+.journal-side-image:hover img,
+.journal-more-image:hover img {
+  transform: scale(1.035);
+}
+
+.journal-featured-content {
+  padding-top: 24px;
+  max-width: 850px;
+}
+
+.journal-meta {
+  margin: 0 0 13px;
+  color: #777b80;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 1.15px;
+  text-transform: uppercase;
+}
+
+.journal-meta span {
+  padding: 0 5px;
+  color: #a5a5a5;
+}
+
+.journal-featured-content h3 {
+  margin: 0;
+  max-width: 850px;
+  color: #171717;
+  font-size: clamp(30px, 3.3vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+.journal-featured-content > a,
+.journal-side-content > a,
+.journal-more-story > a:not(.journal-more-image) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.journal-excerpt {
+  margin: 14px 0 18px;
+  max-width: 700px;
+  color: #777b80;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.journal-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #171717;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Right-side stories */
+
+.journal-side {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.journal-side-story {
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e8e7e3;
+}
+
+.journal-side-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.65 / 1;
+  overflow: hidden;
+  background: #eeede9;
+  margin-bottom: 17px;
+}
+
+.journal-side-content h3 {
+  margin: 0;
+  color: #171717;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  font-weight: 500;
+}
+
+.journal-side-content .journal-read-link {
+  margin-top: 15px;
+}
+
+/* Additional research */
+
+.journal-more {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px;
+  margin-top: 76px;
+  padding-top: 36px;
+  border-top: 1px solid #e8e7e3;
+}
+
+.journal-more-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.55 / 1;
+  overflow: hidden;
+  background: #eeede9;
+  margin-bottom: 19px;
+}
+
+.journal-more-story h3 {
+  margin: 0;
+  color: #171717;
+  font-size: 23px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+  font-weight: 500;
+}
+
+.journal-more-story .journal-excerpt {
+  font-size: 14px;
+}
+
+.journal-more-story .journal-read-link {
+  margin-top: 2px;
+}
+
+/* Image fallback */
+
+.journal-image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg, #e9e8e2, #f4f3ef);
+  color: #242722;
+}
+
+.journal-image-placeholder span {
+  font-family: Georgia, serif;
+  font-size: clamp(58px, 8vw, 100px);
+  line-height: 1;
+}
+
+.journal-image-placeholder small {
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .journal-lead {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .journal-side {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .journal-more {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .journal-section {
+    width: calc(100% - 40px);
+    margin: 75px auto 90px;
+  }
+
+  .journal-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 27px;
+  }
+
+  .journal-heading h2 {
+    font-size: 42px;
+    letter-spacing: -2.5px;
+  }
+
+  .journal-lead {
+    gap: 35px;
+  }
+
+  .journal-featured-image {
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .journal-featured-content {
+    padding-top: 18px;
+  }
+
+  .journal-featured-content h3 {
+    font-size: 32px;
+    letter-spacing: -1.3px;
+  }
+
+  .journal-side {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .journal-side-image {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .journal-more {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-top: 45px;
+  }
+
+  .journal-more-story h3 {
+    font-size: 24px;
+  }
+}
+
+/* Balance the remaining article layout */
+
+.journal-more {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: start;
+}
+
+/* When only one article remains */
+.journal-more:has(.journal-more-story:first-child:last-child) {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 460px;
+}
+
+/* When two articles remain */
+.journal-more:has(.journal-more-story:nth-child(2):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+}
+
+@media (max-width: 600px) {
+  .journal-more:has(.journal-more-story:first-child:last-child),
+  .journal-more:has(.journal-more-story:nth-child(2):last-child) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+/* =====================================
+   HAFSAAMU — MINIMAL PRODUCT SHOWCASE
+===================================== */
+
+.products-section {
+  padding: 110px 0;
+  background: #fff;
+}
+
+.products-heading {
+  max-width: 650px;
+  margin-bottom: 65px;
+}
+
+.products-heading h2 {
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  margin: 15px 0 20px;
+}
+
+.products-heading > p:last-child {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 470px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 70px;
+}
+
+.product-card {
+  display: block;
+  min-width: 0;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.product-visual {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: none !important;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-visual {
+  transform: scale(1.01);
+}
+
+.product-info {
+  padding: 24px 0 0 !important;
+}
+
+.product-info h3 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -1.2px;
+  margin: 0 0 12px;
+  color: #171717;
+}
+
+.product-info p {
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #777;
+  margin: 0 0 20px;
+}
+
+.product-info > span {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #171717;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover .product-info > span {
+  transform: translateX(5px);
+}
+
+@media (max-width: 700px) {
+  .products-section {
+    padding: 75px 0;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .products-heading {
+    margin-bottom: 40px;
+  }
+
+  .product-info h3 {
+    font-size: 24px;
+  }
+}

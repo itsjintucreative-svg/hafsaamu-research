@@ -1,5 +1,6 @@
 ---
 title: "AIES Equal Profits: Customer Eligibility, Monthly Shopping Budget and Withdrawals"
+image: "/media/aies-customer-eligibility2.jpg"
 date: "2026-11-03"
 category: "Economic Research"
 author: "Hafsaamu Research"

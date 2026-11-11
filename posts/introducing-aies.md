@@ -1,6 +1,6 @@
 ---
 title: "Introducing AIES: A Vision for an Equal Profits Economy"
-
+image: "/media/aies-equal-profits-system.jpg"
 date: "November 3, 2026"
 category: "Economic Research"
 author: "Phinu"
