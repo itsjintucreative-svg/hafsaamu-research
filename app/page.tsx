@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import IndustrySearch from "./components/industry-search";
 import ProductsShowcase from "./components/products-showcase";
+import ScrollExperience from "./components/scrollytelling/ScrollExperience";
 
 export default function Home() {
   const posts = getAllPosts();
@@ -17,6 +18,7 @@ export default function Home() {
       : null);
 
   return (
+     <>
     <main className="research-home">
       <IndustrySearch />
 
@@ -179,5 +181,9 @@ export default function Home() {
       </section>
 
     </main>
+    <ScrollExperience />
+  </>
+
+    
   );
 }
