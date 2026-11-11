@@ -17,46 +17,55 @@ export type Post = {
 };
 
 export function getAllPosts(): Post[] {
-  const files = fs.readdirSync(postsDirectory).filter((file) =>
-    file.endsWith(".md")
+  if (!fs.existsSync(postsDirectory)) {
+    return [];
+  }
+
+  const files = fs
+    .readdirSync(postsDirectory)
+    .filter((file) => file.endsWith(".md"));
+
+  const posts = files.map((file) => {
+    const slug = file.replace(/\.md$/, "");
+    const fullPath = path.join(postsDirectory, file);
+    const source = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(source);
+
+    return {
+      slug,
+      title: data.title || slug,
+      date: data.date || "",
+      category: data.category || "Research",
+      author: data.author || "Hafsaamu",
+      excerpt: data.excerpt || "",
+      image: data.image || undefined,
+      content,
+    };
+  });
+
+  return posts.sort(
+    (a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime()
   );
-
-  return files
-    .map((file) => {
-      const slug = file.replace(/\.md$/, "");
-      const fullPath = path.join(postsDirectory, file);
-      const source = fs.readFileSync(fullPath, "utf8");
-      const { data, content } = matter(source);
-
-      return {
-        slug,
-        title: data.title,
-        date: data.date,
-        category: data.category,
-        author: data.author,
-        excerpt: data.excerpt,
-        image: data.image || undefined,
-        content,
-      };
-    })
-    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
 export function getPostBySlug(slug: string): Post | null {
   const fullPath = path.join(postsDirectory, `${slug}.md`);
 
-  if (!fs.existsSync(fullPath)) return null;
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
 
   const source = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(source);
 
   return {
     slug,
-    title: data.title,
-    date: data.date,
-    category: data.category,
-    author: data.author,
-    excerpt: data.excerpt,
+    title: data.title || slug,
+    date: data.date || "",
+    category: data.category || "Research",
+    author: data.author || "Hafsaamu",
+    excerpt: data.excerpt || "",
     image: data.image || undefined,
     content,
   };
