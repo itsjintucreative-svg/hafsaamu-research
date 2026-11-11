@@ -1,0 +1,234 @@
+
+.experience {
+  background: #fff;
+  color: #171717;
+  overflow: clip;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.intro {
+  min-height: 90vh;
+  padding: 140px 8vw 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: #888;
+}
+
+.intro h1 {
+  font-size: clamp(48px, 8vw, 108px);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.075em;
+  margin: 35px 0 24px;
+}
+
+.intro p {
+  max-width: 520px;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.scrollHint {
+  margin-top: 75px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #888;
+}
+
+.stage {
+  height: 100vh;
+  min-height: 650px;
+  position: relative;
+  background: #101010;
+  color: white;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.stageContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+}
+
+.stageContent h2 {
+  font-size: clamp(38px, 7vw, 88px);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 1.1;
+  margin: 35px auto;
+}
+
+.stageContent h2:not(.story-line-one) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 55px;
+}
+
+.stageContent h2.story-line-two,
+.stageContent h2.story-line-three {
+  opacity: 0;
+}
+
+.stageContent .eyebrow {
+  color: #999;
+}
+
+.orbWrap {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.orb {
+  width: min(40vw, 350px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 30%, #fff 0%, #aaa 15%, #444 45%, #171717 75%);
+  opacity: 0.24;
+  filter: blur(2px);
+}
+
+.stageNumber {
+  position: absolute;
+  bottom: 35px;
+  right: 8%;
+  color: #777;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.insights {
+  padding: 150px 9vw;
+  background: #f8f8f7;
+}
+
+.insights > h2 {
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: 1.08;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+  margin: 35px 0 75px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  padding: 35px 28px;
+  min-height: 230px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.card span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #999;
+}
+
+.card h3 {
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-top: 45px;
+}
+
+.card p {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.final {
+  min-height: 75vh;
+  padding: 120px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.final h2 {
+  font-size: clamp(45px, 7vw, 90px);
+  line-height: 1.08;
+  letter-spacing: -0.07em;
+  font-weight: 400;
+  margin: 35px 0 20px;
+}
+
+.final p {
+  color: #888;
+}
+
+.final a {
+  margin-top: 35px;
+  color: #171717;
+  text-decoration: none;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .intro {
+    min-height: 80vh;
+    padding: 100px 22px;
+  }
+
+  .stage {
+    min-height: 550px;
+  }
+
+  .stageContent h2 {
+    font-size: 43px;
+  }
+
+  .stageContent h2:not(.story-line-one) {
+    top: 45px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .insights {
+    padding: 100px 22px;
+  }
+
+  .card {
+    min-height: 190px;
+  }
+
+  .orb {
+    width: 65vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience * {
+    scroll-behavior: auto !important;
+  }
+}
