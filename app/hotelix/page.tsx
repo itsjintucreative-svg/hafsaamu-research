@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Manrope, IBM_Plex_Mono } from "next/font/google";
 import styles from "./hotelix.module.css";
+import HotelixPreview from "./hotelix-preview";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -58,14 +59,11 @@ export default function HotelixPage() {
         <section className={styles.hero}>
           <p className={styles.eyebrow}>HAFSAAMU RESEARCH / HOTELIX</p>
 
-          <h1>
-            Your Hotel.
-            <br />
-            Your Data.
-            <br />
-            Your Financial Forecasts.
-          </h1>
-
+          <h1 className={styles.animatedTitle}>
+  <span className={styles.fromLeft}>Your Hotel.</span>
+  <span className={styles.fromRight}>Your Data.</span>
+  <span className={styles.fromLeft}>Your Financial Forecasts.</span>
+</h1>
           <p className={styles.intro}>
             Hafsaamu Hotelix is a local-first machine learning system that
             turns your daily financial records into intelligent revenue and
@@ -127,6 +125,8 @@ export default function HotelixPage() {
             ))}
           </div>
         </section>
+        <HotelixPreview />
+        
 
         {/* Latest Release */}
         <section id="download" className={styles.release}>
